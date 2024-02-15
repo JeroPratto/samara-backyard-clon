@@ -2,9 +2,9 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { Header } from './components/Header'
 import Home from './Pages/Home/Home'
 import { TechSpecs } from './Pages/TechSpecs'
-import Footer from './Pages/Footer/Footer'
 import { HowItWorks } from './Pages/HowItWorks'
 import { useEffect } from 'react'
+import { Footer } from './components/Footer'
 
 function App() {
 	return (
