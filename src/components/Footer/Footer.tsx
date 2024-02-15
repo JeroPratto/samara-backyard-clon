@@ -51,7 +51,8 @@ const Footer: React.FC<FooterProps> = ({}) => {
 						Drop us your email to learn waht's next.
 					</p>
 					<form>
-						<input type='email' required />
+						<label style={{ visibility: 'hidden' }}>leave us your email</label>
+						<input type='email' required aria-label='your email' />
 					</form>
 				</div>
 			</footer>

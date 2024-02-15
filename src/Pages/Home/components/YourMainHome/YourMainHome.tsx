@@ -17,7 +17,11 @@ const YourMainHome: React.FC<YourMainHomeProps> = ({}) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.imagesContainer}>
-				<button onClick={changeCurrent} className={styles.totalBtn}></button>
+				<button
+					onClick={changeCurrent}
+					className={styles.totalBtn}
+					aria-label='Change Image'
+				></button>
 				<h3 className={styles.title}>
 					Your main <br /> home might <br /> get jealous
 				</h3>

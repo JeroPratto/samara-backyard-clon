@@ -12,23 +12,23 @@ export type ThreeSizesProps = {
 const ThreeSizes: React.FC<ThreeSizesProps> = ({}) => {
 	const colors = [
 		{
-			name: '',
+			name: 'Bone white',
 			color: '#f6f7f5',
 		},
 		{
-			name: '',
+			name: 'Driftwood',
 			color: '#dadad9',
 		},
 		{
-			name: '',
+			name: 'Parchment',
 			color: '#d7d5cb',
 		},
 		{
-			name: '',
+			name: 'Evergreen',
 			color: '#375033',
 		},
 		{
-			name: '',
+			name: 'Drak bronze',
 			color: '#2e2e2c',
 		},
 	]
@@ -123,6 +123,7 @@ const ThreeSizes: React.FC<ThreeSizesProps> = ({}) => {
 								currentColor[visible] === index ? styles.current : ''
 							} ${styles.picker}`}
 							style={{ backgroundColor: color.color }}
+							aria-label={`Change the color of the house to ${color.name}`}
 						>
 							<span className={styles.border}></span>
 						</button>
