@@ -1,10 +1,4 @@
-import {
-	BrowserRouter,
-	Route,
-	Routes,
-	ScrollRestoration,
-	useLocation,
-} from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { Header } from './components/Header'
 import Home from './Pages/Home/Home'
 import { TechSpecs } from './Pages/TechSpecs'
