@@ -1,0 +1,135 @@
+.container {
+	display: grid;
+	grid-template-columns: repeat(12, [col-start] 1fr);
+	gap: 22px;
+	background-color: #fff;
+	padding: 0 3vw;
+	width: 100%;
+}
+.title {
+	margin-top: 182px;
+	grid-column: col-start 2 / span 10;
+	font-size: 6.67vw;
+	line-height: 96%;
+	letter-spacing: -0.04em;
+	white-space: nowrap;
+	color: #000;
+	font-weight: 400;
+}
+.mobile {
+	display: none;
+}
+.introElevation,
+.FirstIntroElevationDesktop,
+.SecondIntroElevationDesktop,
+.FirstIntroElevationMobile,
+.SecondnItroElevationMobile {
+	width: calc(0.9em * 120 / 55);
+	display: inline-block;
+	z-index: 0;
+	position: relative;
+}
+.introElevation img {
+	position: absolute;
+	left: calc(-0.9em * 120 / 65 * 0.23);
+	top: -0.71em;
+	height: 0.85em;
+}
+.FirstIntroElevationMobile,
+.SecondnItroElevationMobile {
+	display: none;
+}
+.FirstIntroElevationDesktop,
+.FirstIntroElevationMobile {
+	width: calc(0.9em * 135 / 55);
+	transform: translateX(-0.125em);
+}
+
+.FirstIntroElevationDesktop img,
+.FirstIntroElevationMobile img {
+	position: absolute;
+	left: calc(-0.9em * 150 / 65 * 0.08);
+	top: -0.71em;
+	height: 0.85em;
+}
+.SecondIntroElevationDesktop,
+.SecondnItroElevationMobile {
+	width: calc(0.9em * 250 / 75);
+	transform: translateX(-0.125em);
+}
+.SecondIntroElevationDesktop img,
+.SecondnItroElevationMobile img {
+	position: absolute;
+	left: calc((-0.9em * 250 / 75 * 0.15) + 10px);
+	height: 0.845em;
+	top: -0.75em;
+}
+/*  */
+
+.information {
+	margin-top: 64px;
+	grid-column: col-start 2 / span 10;
+}
+.informationTitle,
+.available {
+	font-size: clamp(30px, 2.9vw, 36px);
+	line-height: 117%;
+	letter-spacing: -0.02em;
+	color: #000;
+}
+.available {
+	color: rgba(0, 0, 0, 0.4);
+}
+.notIn {
+	margin-top: 24px;
+	display: flex;
+	gap: 10px;
+	font-size: 15px;
+	line-height: 140%;
+	color: rgba(0, 0, 0, 0.4);
+}
+.tellUs {
+	color: rgba(0, 0, 0, 0.6);
+	font-weight: 500;
+}
+@media screen and (max-width: 770px) {
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 0 24px;
+	}
+	.title {
+		margin-top: 140px;
+		font-size: 11vw;
+	}
+	.title br {
+		display: none;
+	}
+	.mobile {
+		display: block !important;
+	}
+	.FirstIntroElevationDesktop,
+	.SecondIntroElevationDesktop {
+		display: none;
+	}
+	.FirstIntroElevationMobile,
+	.SecondnItroElevationMobile {
+		display: inline-block;
+	}
+	/*  */
+	.informationTitle,
+	.available {
+		font-size: clamp(21px, 6.4vw, 24px);
+		line-height: 125%;
+		letter-spacing: -0.01em;
+	}
+	.notIn {
+		flex-direction: column;
+		font-size: 14px;
+		line-height: 140%;
+		letter-spacing: 0;
+		gap: 0;
+	}
+}

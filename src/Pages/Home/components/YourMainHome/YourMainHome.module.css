@@ -1,0 +1,87 @@
+.container {
+	width: 100%;
+	position: relative;
+	margin-top: 50px;
+}
+.title {
+	position: relative;
+	z-index: 40;
+	padding: 10%;
+	font-size: clamp(54px, 4.16vw, 60px);
+	line-height: 110%;
+	letter-spacing: -0.04em;
+	color: #fff;
+	font-weight: 400;
+}
+.imagesContainer {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 1440/870;
+}
+.totalBtn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	z-index: 50;
+	cursor: pointer;
+}
+.imagesContainer img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	z-index: 0;
+	transition: opacity 0.5s;
+}
+.imagesContainer img.current {
+	opacity: 1;
+}
+.btnContainer {
+	position: absolute;
+	bottom: 30px;
+	right: 3vw;
+	display: flex;
+	gap: 6px;
+	z-index: 2;
+	backdrop-filter: blur(18px) saturate(1.5);
+	border-radius: 6px;
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 6px 9px;
+}
+
+.btnContainer button {
+	border-radius: 14px;
+	border: none;
+	padding: 5px 8px 6px;
+	background-color: rgba(0, 0, 0, 0.15);
+	color: #fff;
+	font-size: 12px;
+	line-height: 100%;
+	font-weight: 500;
+}
+.btnContainer button.current {
+	background-color: #0096f7;
+}
+
+@media screen and (max-width: 770px) {
+	.title {
+		font-size: clamp(32px, 9.6vw, 36px);
+		line-height: 117%;
+		letter-spacing: -0.04em;
+	}
+	.imagesContainer {
+		aspect-ratio: 375/456;
+		margin-bottom: 100px;
+	}
+	.btnContainer {
+		bottom: -44px;
+		right: 10px;
+	}
+}

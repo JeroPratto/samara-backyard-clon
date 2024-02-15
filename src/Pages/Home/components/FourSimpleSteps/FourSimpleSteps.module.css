@@ -1,0 +1,166 @@
+.container {
+	display: flex;
+	width: 100%;
+	position: relative;
+	flex-wrap: wrap;
+	gap: 24px;
+	padding: calc(var(--column-width) + 24px);
+}
+
+/*  */
+.getBackyardContainer {
+	width: calc(var(--column-width) * 4 + 24px * 3);
+}
+.getTitle {
+	font-size: clamp(42px, 3.3vw, 48px);
+	line-height: 110%;
+	letter-spacing: -0.04em;
+	color: #000;
+	font-weight: 400;
+}
+.getDesc {
+	font-size: clamp(42px, 3.3vw, 48px);
+	line-height: 110%;
+	letter-spacing: -0.04em;
+	color: rgba(0, 0, 0, 0.4);
+	font-weight: 400;
+}
+/*  */
+
+.stepContainer {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: space-between;
+	width: calc(var(--column-width) * 3 + 24px * 2);
+}
+
+/*  */
+
+.detailsContainer {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	padding-top: 54px;
+	padding-left: calc(var(--column-width) + 24px);
+	width: calc(var(--column-width) * 4 + 24px * 3);
+}
+.titleDetail {
+	margin-bottom: 0.25em;
+	letter-spacing: 0;
+	font-size: clamp(21px, 1.6vw, 26px);
+	line-height: 125%;
+	color: #000;
+}
+
+.descDetail {
+	margin-bottom: 0.25em;
+	letter-spacing: 0;
+	font-size: clamp(21px, 1.6vw, 26px);
+	line-height: 125%;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.howItWorks {
+	margin-top: 30px;
+	box-shadow: 0 0.5px 2px 0 rgba(0, 0, 0, 0.12);
+	border-radius: 12px;
+	background-color: rgba(0, 0, 0, 0.04);
+	padding: 14px;
+	width: 140px;
+	color: #0096f7;
+	font-size: 14px;
+	line-height: 140%;
+	font-weight: 500;
+	border: none;
+}
+.design {
+	margin-top: 12px;
+	background-color: #0096f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	box-shadow: 0 0.5px 2px 0 rgba(0, 0, 0, 0.12);
+	border-radius: 12px;
+	padding: 14px;
+	width: 140px;
+	font-size: 14px;
+	line-height: 140%;
+	font-weight: 500;
+	border: none;
+	color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+	.getTitle,
+	.getDesc {
+		font-size: clamp(26px, 2vw, 30px);
+		line-height: 120%;
+		letter-spacing: -0.02em;
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding-left: 2vw;
+		padding-right: 2vw;
+		overflow: hidden;
+	}
+	.getBackyardContainer {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	.getTitle br,
+	.getDesc br {
+		display: none;
+	}
+	.getTitle,
+	.getDesc {
+		font-size: clamp(32px, 9.6vw, 36px);
+		line-height: 117%;
+		letter-spacing: -0.04em;
+	}
+	.carousel {
+		width: 100%;
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: calc(100vw - 50px);
+		overflow-x: auto;
+		scroll-snap-type: X mandatory;
+		scrollbar-width: 0;
+		scroll-behavior: smooth;
+		gap: 18px;
+	}
+	.carousel::-webkit-scrollbar {
+		display: none;
+	}
+	.stepContainer {
+		scroll-snap-align: center;
+		width: 100%;
+		max-width: 100%;
+	}
+	.detailsContainer {
+		display: flex;
+		flex-direction: row;
+		border-top: 0.5px solid rgba(0, 0, 0, 0.15);
+		padding: 0;
+		padding-top: 20px;
+		width: 100%;
+	}
+	.howItWorks {
+		margin-top: 0;
+	}
+	.titleAndDescDetail {
+		min-width: 62%;
+	}
+	.btnContainer {
+		width: 100%;
+	}
+	.btnContainer button {
+		width: 100%;
+	}
+}

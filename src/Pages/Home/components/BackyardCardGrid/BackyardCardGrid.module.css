@@ -1,0 +1,66 @@
+.container {
+	padding: 64px 3vw;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	column-gap: 24px;
+	background-color: #fff;
+}
+
+.card {
+	grid-column: span 3;
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 0.5px 2px 0 rgba(0, 0, 0, 0.12);
+	border-radius: 12px;
+	aspect-ratio: 315/436;
+	overflow: hidden;
+	color: #000;
+	/*  */
+	font-size: clamp(21px, 1.6vw, 26px);
+	line-height: 125%;
+	letter-spacing: 0;
+}
+
+.information {
+	position: absolute;
+	z-index: 1;
+	padding: 18px 24px;
+}
+.preTitle {
+	opacity: 0.4;
+}
+.title img {
+	transform: translateY(-1px);
+	width: auto;
+	height: 0.5em;
+}
+
+.background {
+	width: 100%;
+	aspect-ratio: 315/436;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+	.card {
+		font-size: clamp(16px, 4.8vw, 18px);
+		line-height: 133%;
+		letter-spacing: 0;
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.container {
+		padding: 64px 1vw;
+		row-gap: 5px;
+	}
+	.card {
+		grid-column: span 12;
+		overflow: hidden;
+	}
+	.card,
+	.background {
+		aspect-ratio: 351/216;
+	}
+}
